@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/05 12:37:42 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/16 21:39:20 by brde-car         ###   ########.fr       */
+/*   Created: 2026/05/18 21:54:06 by brde-car          #+#    #+#             */
+/*   Updated: 2026/05/22 03:37:30 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+size_t ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	if (c >= 0 && c <= 127)
-	{
-		return (1);
-	}
-	return (0);
+    size_t i;
+    size_t len;
+    
+    len = 0;
+    while (src[len] != '\0')
+    {
+        len++;
+    }
+    if (size == 0)
+    {
+        return len;
+    }
+    i = 0;
+    while (src[i] != '\0' && i < (size - 1))
+    {
+        dst[i] = src[i];
+        i++;
+    }
+    dst[i] = '\0';
+    return (len);
 }

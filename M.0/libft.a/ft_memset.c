@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/04 08:41:02 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/16 21:38:35 by brde-car         ###   ########.fr       */
+/*   Created: 2026/05/22 04:55:00 by brde-car          #+#    #+#             */
+/*   Updated: 2026/05/22 05:32:25 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void *ft_memset(void *dest, int c, size_t count)
 {
-	size_t	i;
+   unsigned char *ptr;
+   size_t i;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+   ptr = (unsigned char)dest;
+   i = 0;
+   while (i < count)
+   {
+        ptr[i] = (unsigned char *)c;
+        i++;
+   }
+   return (dest);
 }

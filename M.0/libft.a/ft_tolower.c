@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/04 11:27:10 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/16 21:35:36 by brde-car         ###   ########.fr       */
+/*   Created: 2026/05/16 21:27:51 by brde-car          #+#    #+#             */
+/*   Updated: 2026/05/22 04:08:11 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int	ft_tolower(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
+	if (c >= 65 && c <= 90)
 	{
-		return (1);
+		c = c + 32;
 	}
-	return (0);
+	return (c);
 }
