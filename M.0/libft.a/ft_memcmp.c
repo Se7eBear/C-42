@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/22 04:55:00 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/23 19:50:32 by brde-car         ###   ########.fr       */
+/*   Created: 2026/05/23 19:30:57 by brde-car          #+#    #+#             */
+/*   Updated: 2026/05/23 19:44:31 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *dest, int c, size_t count)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-   unsigned char *ptr;
-   size_t i;
+    const unsigned char   *ptr;
+    const unsigned char *ptr_char;
+    size_t  i;
 
-   ptr = (unsigned char *)dest;
-   i = 0;
-   while (i < count)
-   {
-        ptr[i] = (unsigned char)c;
+    ptr = (const unsigned char *)s1;
+    ptr_char = (const unsigned char *)s2;
+    i = 0;
+    while (i < n && ptr[i] == ptr_char[i])
+    {
         i++;
-   }
-   return (dest);
+    }
+    if (i == n)
+        return (0);
+    return (ptr[i] - ptr_char[i]);
 }

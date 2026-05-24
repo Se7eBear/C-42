@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/22 04:55:00 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/23 19:50:32 by brde-car         ###   ########.fr       */
+/*   Created: 2026/05/22 22:10:25 by brde-car          #+#    #+#             */
+/*   Updated: 2026/05/22 22:25:33 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *dest, int c, size_t count)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-   unsigned char *ptr;
-   size_t i;
+    unsigned char   *ptr;
+    size_t  i;
+    
+    if (!dest && !src)
+        return (dest);
 
-   ptr = (unsigned char *)dest;
-   i = 0;
-   while (i < count)
-   {
-        ptr[i] = (unsigned char)c;
-        i++;
-   }
-   return (dest);
+    ptr = (unsigned char *)dest;
+    i = 0;
+    while (i < n)
+    {
+        ptr[i] = ((const unsigned char *)src)[i];
+        i++;    
+    }
+    return (dest);
 }
