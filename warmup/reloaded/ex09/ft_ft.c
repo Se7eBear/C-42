@@ -6,21 +6,20 @@
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 14:42:36 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/13 14:45:05 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/05/15 17:46:17 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_ft(int *nbr)
+void	ft_ft(int *nbr)
 {
-    *nbr = 42;
+	*nbr = 42;
 }
 
 // #include <stdio.h>
 
 // int main(void)
 // {
-//     int n;
-    
+//     int n;  
 //     n = 10;
 //     ft_ft(&n);
 //     printf("%d", n);

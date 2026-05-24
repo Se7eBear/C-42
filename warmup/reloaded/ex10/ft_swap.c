@@ -6,26 +6,24 @@
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 14:45:36 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/13 14:48:27 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/05/15 17:51:52 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-    int c;
+	int	c;
 
-    c = *a;
-    *a = *b;
-    *b = c;
+	c = *a;
+	*a = *b;
+	*b = c;
 }
 
 // #include <stdio.h>
-
 // int main(void)
 // {
 //     int a = 2;
-//     int b = 1;
-    
+//     int b = 1; 
 //     ft_swap(&a, &b);
 //     printf("%d, %d", a, b);
 // }

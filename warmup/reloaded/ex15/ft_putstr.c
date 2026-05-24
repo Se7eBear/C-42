@@ -6,23 +6,22 @@
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 15:17:27 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/13 15:19:37 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/05/15 18:45:07 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar(char c)
-{
-    write(1, &c, 1);
-}
+#include <unistd.h>
 
-void ft_putstr(char *str)
-{
-    int i;
+void	ft_putchar(char c);
 
-    i = 0;
-    while(str[i] != '\0')
-    {
-        ft_putchar(str[i]);
-        i++;       
-    }
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
 }

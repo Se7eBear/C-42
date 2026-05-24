@@ -5,32 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/13 13:50:36 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/13 13:50:37 by brde-car         ###   ########.fr       */
+/*   Created: 2026/05/15 16:55:29 by brde-car          #+#    #+#             */
+/*   Updated: 2026/05/15 19:02:07 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar(char c)
+void	ft_putchar(char c);
+
+void	ft_print_alphabet(void)
 {
-    write(1, &c, 1);
+	char	i;
+
+	i = 'a';
+	while (i >= 'a' && i <= 'z')
+	{
+		ft_putchar(i);
+		i++;
+	}
 }
-
-void ft_print_alphabet(void)
-{   
-    char letter;
-
-    letter = 'a';
-    while (letter >= 'a' && letter <= 'z')
-    {
-        ft_putchar(letter);
-        letter++;
-    }
-    ft_putchar('\n');
-}
-
-// int main(void)
-// {
-//     ft_print_alphabet();
-// }

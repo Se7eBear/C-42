@@ -6,18 +6,16 @@
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 15:20:17 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/13 15:21:10 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/05/15 17:59:03 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(str[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brde-car <brde-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/23 18:41:33 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/23 18:42:03 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/05/24 09:34:02 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_POINT_H
 # define FT_POINT_H
 
-typedef struct	s_point
+typedef struct s_point
 {
 	int	x;
 	int	y;
-}				t_point;
+}	t_point;
 
 #endif

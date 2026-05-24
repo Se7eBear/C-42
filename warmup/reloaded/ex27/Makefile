@@ -6,10 +6,10 @@ CFLAGS	= -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) display_file.c -o $(NAME)
+	$(CC) $(CFLAGS) ft_display_file.c -o $(NAME)
 
 clean:
-	rm -f display_file.o
+	rm -f ft_display_file.o
 
 fclean: clean
 	rm -f $(NAME)

@@ -6,12 +6,12 @@
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 15:09:31 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/13 15:10:57 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/05/15 17:53:15 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-    *div = a / b;
-    *mod = a % b;
+	*div = a / b;
+	*mod = a % b;
 }

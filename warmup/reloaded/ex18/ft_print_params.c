@@ -6,15 +6,15 @@
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 19:08:56 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/23 18:51:39 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/05/15 19:19:02 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar (char c);
+void	ft_putchar(char c);
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int	i;
 	int	j;

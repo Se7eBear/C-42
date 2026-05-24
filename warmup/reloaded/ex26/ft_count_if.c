@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brde-car <brde-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/23 18:44:30 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/23 18:52:06 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/05/24 09:04:44 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_count_if(char **tab, int (*f)(char*))
 {
-    int i;
-	int count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
