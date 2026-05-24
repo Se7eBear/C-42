@@ -3,20 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brde-car <brde-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 11:27:10 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/05 23:14:44 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/05/24 10:00:50 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    if (ft_isalpha(c) || ft_isdigit(c))
-    {
-        return(1);
-    }
-    return(0);
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	return (0);
 }

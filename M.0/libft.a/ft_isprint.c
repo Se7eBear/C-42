@@ -3,20 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brde-car <brde-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 12:42:14 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/05 23:14:59 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/05/24 10:04:20 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 126)
-    {
-        return (1);
-    }
-    return (0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
