@@ -6,7 +6,7 @@
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 23:14:01 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/28 01:07:33 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/05/28 21:48:29 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ void	*ft_memchr(const void *s, int c, size_t n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
 
 typedef struct s_list
 {
