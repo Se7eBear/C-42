@@ -6,7 +6,7 @@
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 05:15:25 by brde-car          #+#    #+#             */
-/*   Updated: 2026/06/02 05:25:58 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/06/02 05:39:08 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	return ;
+	(void)s;
+	(void)f;
 }

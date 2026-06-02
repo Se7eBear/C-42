@@ -6,10 +6,15 @@
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 05:03:41 by brde-car          #+#    #+#             */
-/*   Updated: 2026/06/02 05:04:48 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/06/02 05:39:53 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_split(char const *s, char c);
+char	**ft_split(char const *s, char c)
+{
+	(void)s;
+	(void)c;
+	return (NULL);
+}

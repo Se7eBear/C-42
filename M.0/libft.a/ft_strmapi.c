@@ -6,7 +6,7 @@
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 05:13:39 by brde-car          #+#    #+#             */
-/*   Updated: 2026/06/02 05:18:48 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/06/02 05:39:05 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	
+	(void)s;
+	(void)f;
+	return (NULL);
 }
