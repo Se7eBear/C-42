@@ -6,7 +6,7 @@
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 22:52:11 by brde-car          #+#    #+#             */
-/*   Updated: 2026/05/28 00:26:35 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/06/02 17:54:11 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (ptr[i] == aux)
-		{
 			return ((void *)&ptr[i]);
-		}
 		i++;
 	}
 	return (NULL);
