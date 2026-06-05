@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brde-car <brde-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 23:14:01 by brde-car          #+#    #+#             */
-/*   Updated: 2026/06/03 06:11:49 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/06/04 18:30:10 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -60,5 +59,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_lstadd_front(t_list **lst, t_list *new);
 t_list	*ft_lstnew(void *content);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
