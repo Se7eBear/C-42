@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brde-car <brde-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/03 05:52:25 by brde-car          #+#    #+#             */
-/*   Updated: 2026/06/04 15:54:27 by brde-car         ###   ########.fr       */
+/*   Created: 2026/05/23 19:30:57 by brde-car          #+#    #+#             */
+/*   Updated: 2026/06/05 05:01:24 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	if (!lst || !new)
-		return ;
-	new->next = *lst;
-	*lst = new;
+	const unsigned char	*ptr;
+	const unsigned char	*ptr_char;
+	size_t				i;
+
+	ptr = (const unsigned char *)s1;
+	ptr_char = (const unsigned char *)s2;
+	i = 0;
+	while (i < n)
+	{
+		if (ptr[i] != ptr_char[i])
+		{
+			return (ptr[i] - ptr_char[i]);
+		}
+		i++;
+	}
+	return (0);
 }
