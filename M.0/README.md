@@ -35,7 +35,7 @@ Custom utility functions tailored for string manipulation and output generation.
 * String operations: ft_substr, ft_strjoin, ft_strtrim, ft_split, ft_itoa, ft_strmapi, ft_striteri
 * File descriptor operations: ft_putchar_fd, ft_putstr_fd, ft_putendl_fd, ft_putnbr_fd
 
-### Part 3 - Bonus (Linked Lists)
+### Part 3 - Linked Lists
 Functions designed to create, iterate, and manage a custom linked list data structure (t_list).
 * ft_lstnew: Creates a new node.
 * ft_lstadd_front / ft_lstadd_back: Adds a node to the beginning or end of the list.
