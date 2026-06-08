@@ -6,7 +6,7 @@
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 00:33:50 by brde-car          #+#    #+#             */
-/*   Updated: 2026/06/02 03:34:55 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/06/08 12:19:32 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	aux = (char)c;
 	i = 0;
 	while (s[i] != '\0')
-	{
 		i++;
-	}
 	while (i >= 0)
 	{
 		if (s[i] == aux)
