@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brde-car <brde-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:06 by brde-car          #+#    #+#             */
-/*   Updated: 2026/06/15 21:10:36 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/06/30 14:26:27 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,23 @@
 
 int	ft_check(char format, va_list *args)
 {
-	int	count;
-
-	count = 0;
 	if (format == 'c')
-		count += ft_putchar(va_arg(*args, int));
+		return (ft_putchar(va_arg(*args, int)));
 	else if (format == 's')
-		count += ft_putstr(va_arg(*args, char *));
+		return (ft_putstr(va_arg(*args, char *)));
 	else if (format == 'p')
-		count += ft_putptr(va_arg(*args, unsigned long));
+		return (ft_putptr(va_arg(*args, unsigned long)));
 	else if (format == 'd')
-		count += ft_putnbr(va_arg(*args, int));
+		return (ft_putnbr(va_arg(*args, int)));
 	else if (format == 'i')
-		count += ft_putnbr(va_arg(*args, int));
+		return (ft_putnbr(va_arg(*args, int)));
 	else if (format == 'u')
-		count += ft_putnbr_unsigned(va_arg(*args, unsigned int));
+		return (ft_putnbr_unsigned(va_arg(*args, unsigned int)));
 	else if (format == 'x')
-		count += ft_puthex(va_arg(*args, unsigned int), "0123456789abcdef");
+		return (ft_puthex(va_arg(*args, unsigned int), "0123456789abcdef"));
 	else if (format == 'X')
-		count += ft_puthex(va_arg(*args, unsigned int), "0123456789ABCDEF");
+		return (ft_puthex(va_arg(*args, unsigned int), "0123456789ABCDEF"));
 	else if (format == '%')
-		count += ft_putchar('%');
-	return (count);
+		return (ft_putchar('%'));
+	return (-1);
 }
