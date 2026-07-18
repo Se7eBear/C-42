@@ -6,7 +6,7 @@
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:52:02 by brde-car          #+#    #+#             */
-/*   Updated: 2026/06/21 02:34:24 by brde-car         ###   ########.fr       */
+/*   Updated: 2026/07/18 00:34:20 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,18 @@
 #  define BUFFER_SIZE 42
 # endif
 
-char	*get_next_line(int fd);
-int		ft_strlen(char *str);
-char	*ft_strchar(const char *s, int c);
-int		ft_strlcat(char *dst, const char *src, int size);
-int		ft_strlcpy(char *dst, const char *src, int size);
-char	*ft_strjoin(char const *s1, char const *s2);
+typedef struct s_buffer
+{
+	char			*content;
+	struct s_buffer	*next;
+}	t_buffer;
+
+t_buffer	*allocate_clean_node(char *str);
+char		*get_next_line(int fd);
+int			find_newline(t_buffer *stash);
+void		add_node(t_buffer **stash, char *buffer);
+void		free_stash(t_buffer *stash);
+int			ft_strlen(const char *str);
+int			get_line_len(t_buffer *stash);
 
 #endif

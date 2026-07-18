@@ -5,14 +5,72 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/21 01:58:40 by brde-car          #+#    #+#             */
-/*   Updated: 2026/06/21 02:30:43 by brde-car         ###   ########.fr       */
+/*   Created: 2026/07/17 23:24:04 by brde-car          #+#    #+#             */
+/*   Updated: 2026/07/18 00:31:01 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	ft_strlen(char *str)
+int	find_newline(t_buffer *stash)
+{
+	t_buffer	*current;
+	int			i;
+
+	if (!stash)
+		return (0);
+	current = stash;
+	while (current)
+	{
+		i = 0;
+		while (current->content[i])
+		{
+			if (current->content[i] == '\n')
+				return (1);
+			i++;
+		}
+		current = current->next;
+	}
+	return (0);
+}
+
+void	add_node(t_buffer **stash, char *buffer)
+{
+	t_buffer	*new_node;
+	t_buffer	*last;
+
+	new_node = malloc(sizeof(t_buffer));
+	if (!new_node)
+		return ;
+	new_node->content = buffer;
+	new_node->next = NULL;
+	if (!*stash)
+	{
+		*stash = new_node;
+		return ;
+	}
+	last = *stash;
+	while (last->next)
+		last = last->next;
+	last->next = new_node;
+}
+
+void	free_stash(t_buffer *stash)
+{
+	t_buffer	*current;
+	t_buffer	*next_node;
+
+	current = stash;
+	while (current)
+	{
+		next_node = current->next;
+		free(current->content);
+		free(current);
+		current = next_node;
+	}
+}
+
+int	ft_strlen(const char *str)
 {
 	int	i;
 
@@ -24,89 +82,30 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strchar(const char *s, int c)
+t_buffer	*allocate_clean_node(char *str)
 {
-	unsigned char	aux;
-	int				i;
+	t_buffer	*clean;
+	int			i;
 
-	if (!s)
+	clean = malloc(sizeof(t_buffer));
+	if (!clean)
 		return (NULL);
-	aux = (unsigned char)c;
 	i = 0;
-	while (s[i])
+	while (str[i])
+		i++;
+	clean->content = malloc(sizeof(char) * (i + 1));
+	if (!clean->content)
 	{
-		if (s[i] == aux)
-		{
-			return ((char *)&s[i]);
-		}
+		free(clean);
+		return (NULL);
+	}
+	i = 0;
+	while (str[i])
+	{
+		clean->content[i] = str[i];
 		i++;
 	}
-	if (aux == '\0')
-		return ((char *)&s[i]);
-	return (NULL);
-}
-
-int	ft_strlcat(char *dst, const char *src, int size)
-{
-	int	i;
-	int	len;
-	int	src_len;
-
-	len = 0;
-	i = 0;
-	src_len = 0;
-	while (dst[len] != '\0' && len < size)
-		len++;
-	while (src[src_len] != '\0')
-		src_len++;
-	if (size <= len)
-		return (size + src_len);
-	while (src[i] != '\0' && (len + i) < (size - 1))
-	{
-		dst[len + i] = src[i];
-		i++;
-	}
-	dst[len + i] = '\0';
-	return (len + src_len);
-}
-
-int	ft_strlcpy(char *dst, const char *src, int size)
-{
-	int	i;
-	int	len;
-
-	len = 0;
-	while (src[len] != '\0')
-		len++;
-	if (size == 0)
-		return (len);
-	i = 0;
-	while (src[i] != '\0' && i < (size - 1))
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (len);
-}
-
-char	*ft_strjoin(char const *s1, char const *s2)
-{
-	int		len1;
-	int		len2;
-	char	*str;
-
-	if (!s2)
-		return (NULL);
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	str = malloc(len1 + len2 + 1);
-	if (!str)
-		return (NULL);
-	if (s1)
-		ft_strlcpy(str, s1, len1 + 1);
-	else
-		str[0] = '\0';
-	ft_strlcat(str, s2, len1 + len2 + 1);
-	return (str);
+	clean->content[i] = '\0';
+	clean->next = NULL;
+	return (clean);
 }
