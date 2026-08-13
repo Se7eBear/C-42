@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rrotate_op.c                                    :+:      :+:    :+:   */
+/*   ft_reverse_rotate_op.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smachado <smachado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 18:46:05 by brde-car          #+#    #+#             */
-/*   Updated: 2026/07/03 19:46:18 by smachado         ###   ########.fr       */
+/*   Updated: 2026/08/06 20:41:24 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,3 +60,5 @@ void	rrr(t_list **a_lst, t_list **b_lst, t_list **op_lst)
 			ft_lstadd_back(op_lst, ft_lstnew(ft_strdup("rrr")));
 	}
 }
+
+

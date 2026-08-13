@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smachado <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: brde-car <brde-car@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/26 16:52:37 by smachado          #+#    #+#             */
-/*   Updated: 2026/07/09 22:28:48 by smachado         ###   ########.fr       */
+/*   Updated: 2026/08/06 20:43:15 by brde-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int	main(int argc, char **argv)
 	execute_sort(&a_lst, opts.strat, &op_lst);
 	if (opts.bench)
 		run_benchmark(opts.disorder, opts.strat, op_lst);
+	ft_lstprint(a_lst);
 	end_program(a_lst, op_lst);
 	return (0);
 }
