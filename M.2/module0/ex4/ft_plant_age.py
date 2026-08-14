@@ -4,4 +4,3 @@ def ft_plant_age() -> None:
         print("Plant is ready to harvest!")
     else:
         print("Plants needs more time to grow")
-    
