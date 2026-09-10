@@ -1,5 +1,6 @@
 class Plant:
-    def __init__(self, name: str, height: float, age: int):
+    def __init__(self, name: str, height: float
+        , age: int):
         self.name = name
         self.height = height
         self.age = age
@@ -23,11 +24,16 @@ class Plant:
             self.show()
         return self.height - i
 
-def ft_plant_growth() -> None:
-    plant1 = Plant("orquid", 20, 10)
-    print("=== Garden Plant Growth ===")
-    diff = plant1.simu_days(7)
-    print(f"Growth of the week: {round(diff, 1)}cm")
+def ft_plant_factory() -> None:
+    plant_list = [
+        Plant("Orquid", 20, 10),
+        Plant("Cactus", 10, 5),
+        Plant("Rose", 20, 12),
+        Plant("SunFlower", 15, 3),
+    ]
+    for plant in plant_list:
+        print("Created: ", end="")
+        plant.show()
 
 if __name__ == "__main__":
-    ft_plant_growth()
+    ft_plant_factory()
