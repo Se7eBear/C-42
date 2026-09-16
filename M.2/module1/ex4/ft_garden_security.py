@@ -44,7 +44,7 @@ class Plant:
         self.grow()
         self.age_older()
 
-    def simu_days(self, days: int) -> None:
+    def simu_days(self, days: int) -> float:
         i = self.height
         for day in range(days):
             print(f"=== Day {day} ===")
