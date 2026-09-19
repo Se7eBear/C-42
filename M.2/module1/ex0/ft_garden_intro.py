@@ -1,14 +1,14 @@
 
 
 def ft_garden_intro() -> None:
-    name = "lirio"
-    height = "30"
-    age = "1"
+    name = "Rose"
+    height = 25
+    age = 30
 
     print("=== Welcome to My Garden ===")
-    print(f"Name: {name}")
-    print(f"Height: {height} Cm")
-    print(f"Age: {age} years")
+    print(f"Plant: {name}")
+    print(f"Height: {height} cm")
+    print(f"Age: {age} days")
     print("")
     print("=== end of Program ===")
 
