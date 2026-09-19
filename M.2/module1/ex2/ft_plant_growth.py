@@ -10,7 +10,7 @@ class Plant:
         print(f"{self.name}: {round(self.height, 1)}cm, {self.age} days old")
 
     def grow(self) -> float:
-        self.height += 1.2
+        self.height += 0.8
         return self.height
 
     def age_older(self) -> int:
@@ -31,8 +31,9 @@ class Plant:
 
 
 def ft_plant_growth() -> None:
-    plant1 = Plant("orquid", 20, 10)
+    plant1 = Plant("Rose", 25.0, 30)
     print("=== Garden Plant Growth ===")
+    plant1.show()
     diff = plant1.simu_days(7)
     print(f"Growth of the week: {round(diff, 1)}cm")
 

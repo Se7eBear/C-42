@@ -18,7 +18,6 @@ class Plant:
         return self._height
 
     def set_age(self, _age: int) -> None:
-
         if _age < 0:
             print(f"{self.name}: Error, age can't be negative")
             print("Age update rejected")
@@ -55,9 +54,12 @@ class Plant:
 
 def ft_garden_security() -> None:
     print("=== Garden Security System ===")
-    plant = Plant("Rose", 15, 10)
-    print("Created: ", end="")
+    plant = Plant("Rose", 15.0, 10)
+    print("Plant created: ", end="")
     plant.show()
+    print("")
+    plant.set_height(25)
+    plant.set_age(30)
     print("")
     plant.set_height(-12)
     plant.set_age(-12)

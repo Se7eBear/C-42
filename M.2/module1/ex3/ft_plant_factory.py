@@ -32,10 +32,11 @@ class Plant:
 
 def ft_plant_factory() -> None:
     plant_list = [
-        Plant("Orquid", 20, 10),
-        Plant("Cactus", 10, 5),
-        Plant("Rose", 20, 12),
-        Plant("SunFlower", 15, 3),
+        Plant("Rose", 20.0, 30.0),
+        Plant("Oak", 200.0, 365.0),
+        Plant("Cactus", 5.0, 90.0),
+        Plant("SunFlower", 80.0, 45.0),
+        Plant("Fern", 15.0, 120.0)
     ]
     for plant in plant_list:
         print("Created: ", end="")

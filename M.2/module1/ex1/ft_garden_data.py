@@ -14,8 +14,8 @@ if __name__ == "__main__":
     print("=== Garden Plant Registry ===")
 
     plant1 = Plant("Rose", 25, 30)
-    plant2 = Plant("Girassol", 45, 720)
-    plant3 = Plant("gerbera", 20, 300)
+    plant2 = Plant("Sunflower", 80, 45)
+    plant3 = Plant("Cactus", 15, 120)
 
     plant1.show()
     plant2.show()
