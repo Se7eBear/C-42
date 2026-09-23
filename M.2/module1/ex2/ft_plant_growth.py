@@ -1,41 +1,40 @@
-
-
 class Plant:
-    def __init__(self, name: str, height: float, age: int):
+    def __init__(self, name: str, height: float, age: int) -> None:
         self.name = name
         self.height = height
-        self.age = age
+        self.age_days = age
 
     def show(self) -> None:
-        print(f"{self.name}: {round(self.height, 1)}cm, {self.age} days old")
+        print(
+            f"{self.name}: {round(self.height, 1)}cm, "
+            f"{self.age_days} days old"
+        )
 
-    def grow(self) -> float:
+    def grow(self) -> None:
         self.height += 0.8
-        return self.height
 
-    def age_older(self) -> int:
-        self.age += 1
-        return self.age
+    def age(self) -> None:
+        self.age_days += 1
 
-    def s_day(self) -> None:
+    def simulate_day(self) -> None:
         self.grow()
-        self.age_older()
+        self.age()
 
-    def simu_days(self, days: int) -> float:
-        i = self.height
-        for day in range(days):
+    def simulate_days(self, days: int) -> float:
+        initial_height = self.height
+        for day in range(1, days + 1):
             print(f"=== Day {day} ===")
-            self.s_day()
+            self.simulate_day()
             self.show()
-        return self.height - i
+        return self.height - initial_height
 
 
 def ft_plant_growth() -> None:
     plant1 = Plant("Rose", 25.0, 30)
     print("=== Garden Plant Growth ===")
     plant1.show()
-    diff = plant1.simu_days(7)
-    print(f"Growth of the week: {round(diff, 1)}cm")
+    growth = plant1.simulate_days(7)
+    print(f"Growth this week: {round(growth, 1)}cm")
 
 
 if __name__ == "__main__":
