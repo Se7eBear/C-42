@@ -1,0 +1,7 @@
+.env
+.venv/
+venv/
+matrix_env/
+__pycache__/
+*.pyc
+.mypy_cache/
